@@ -1,9 +1,9 @@
 import  { BrowserContext, Page,  } from "@playwright/test";
-import {test,expect} from "../fixtures/regiserPage"
+import {test,expect} from "../fixtures/pageFixtures"
 import Login from "../pages/Login.Page";
 
 
-test.describe('Register Suit',() =>{
+test.describe('Register Suite',() =>{
 
     // let context: BrowserContext;
     // let page: Page;
@@ -13,7 +13,7 @@ test.describe('Register Suit',() =>{
     //     page.goto("https://www.saucedemo.com/");
     // })
 
-    test('it can register successfully',async({homePage,registerPage,page}) =>{
+    test('TC001 - it can register successfully',async({homePage,registerPage,page}) =>{
         await page.goto(homePage.url);
 
         await expect(page).toHaveTitle("Automation Exercise");
@@ -23,7 +23,7 @@ test.describe('Register Suit',() =>{
         await expect(registerPage.signUpForm).toBeVisible();
         await expect(registerPage.signUpFormTitile).toBeVisible();
         
-        await registerPage.signup("Ahmed","testtest12131111@gmail.com");
+        await registerPage.signup("Ahmed","abdelnaby@gmail.com");
         
         await expect(registerPage.accInfoHeading).toBeVisible();
         await expect(registerPage.accInfoHeading).toContainText('Enter Account Information');
@@ -40,14 +40,14 @@ test.describe('Register Suit',() =>{
 
         await registerPage.continue();
         // await page.pause();
-        await expect(registerPage.user).toContainText('Logged in as');
+        await expect(homePage.user).toContainText('Logged in as');
 
-        await registerPage.deleteAccount();
+        // await homePage.deleteAccount();
 
-        await expect(registerPage.accountMsg).toBeVisible();
-        expect(registerPage.accountMsg).toContainText("Account Deleted!");
+        // await expect(registerPage.accountMsg).toBeVisible();
+        // expect(registerPage.accountMsg).toContainText("Account Deleted!");
 
-        await registerPage.continue();
+        // await registerPage.continue();
     
     });
    

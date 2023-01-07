@@ -1,23 +1,36 @@
 import {Locator, Page} from "@playwright/test"
 class Login{
-
-    readonly usernameField: Locator;
-    readonly passwordField: Locator;
-    readonly loginBtn: Locator;
-
     readonly page: Page
+
+
+    readonly loginForm: Locator;
+    readonly loginFormTitile: Locator;
+
+    readonly emailField: Locator;
+    readonly passwrodField: Locator;
+    readonly loginBtn: Locator;
+    readonly accountMsg: Locator;
+
+    readonly loginErrorMsg: Locator;
+
 
     constructor(page: Page){
         this.page = page;
-        this.usernameField = this.page.locator('data-test=username');
-        this.passwordField = this.page.locator('data-test=password');
-        this.loginBtn = this.page.locator('data-test=login-button');
+        this.loginForm = this.page.locator('.login-form');
+        this.loginFormTitile = this.page.locator('.login-form h2');
+        this.emailField = this.page.locator('input[data-qa="login-email"]');
+        this.passwrodField = this.page.locator('input[data-qa="login-password"]');
+        this.loginBtn = this.page.locator('button[data-qa="login-button"]');
+    
+        this.accountMsg = this.page.locator("h2.title");
+
+        this.loginErrorMsg = this.page.locator('p[style="color: red;"]:below(input[data-qa="login-password"])');
     }
 
-    async login(username: string, password: string){
-        await this.usernameField.fill(username);
-        await this.passwordField.fill(password);
-        await this.loginBtn.click();
+    async login(email: string, password: string){
+       await this.emailField.fill(email);
+       await this.passwrodField.fill(password);
+       await this.loginBtn.click();
     }
 }
 

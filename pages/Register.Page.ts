@@ -38,8 +38,6 @@ class Register{
     readonly accountMsg: Locator;
     readonly continueBtn: Locator;
 
-    readonly user: Locator;
-    readonly deleteAccBtn: Locator;
 
     readonly accDeletedMsg: Locator;
 
@@ -75,8 +73,6 @@ class Register{
         this.accountMsg = this.page.locator("h2.title");
         this.continueBtn = this.page.locator('a:has-text("Continue")');
 
-        this.user = this.page.locator("a",{has: this.page.locator("//i[@class='fa fa-user']")});
-        this.deleteAccBtn = this.page.locator('a[href="/delete_account"]');    
         
             
     }
@@ -115,9 +111,7 @@ class Register{
     async continue(){
         await this.continueBtn.click();
     }
-    async deleteAccount(){
-        await this.deleteAccBtn.click();
-    }
+   
 }
 
 export default Register
