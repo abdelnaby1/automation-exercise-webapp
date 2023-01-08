@@ -41,6 +41,7 @@ class Register{
 
     readonly accDeletedMsg: Locator;
 
+    readonly signupErrorMsg: Locator;
 
     constructor(page: Page){
         this.page = page;
@@ -72,6 +73,9 @@ class Register{
         
         this.accountMsg = this.page.locator("h2.title");
         this.continueBtn = this.page.locator('a:has-text("Continue")');
+
+        this.signupErrorMsg = this.page.locator('p[style="color: red;"]:below(input[data-qa="signup-email"])');
+
 
         
             

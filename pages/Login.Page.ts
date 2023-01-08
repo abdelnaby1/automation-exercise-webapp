@@ -13,6 +13,9 @@ class Login{
 
     readonly loginErrorMsg: Locator;
 
+    readonly signupErrorMsg: Locator;
+
+
 
     constructor(page: Page){
         this.page = page;
@@ -25,6 +28,7 @@ class Login{
         this.accountMsg = this.page.locator("h2.title");
 
         this.loginErrorMsg = this.page.locator('p[style="color: red;"]:below(input[data-qa="login-password"])');
+        
     }
 
     async login(email: string, password: string){

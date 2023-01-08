@@ -23,7 +23,7 @@ test.describe('Register Suite',() =>{
         await expect(registerPage.signUpForm).toBeVisible();
         await expect(registerPage.signUpFormTitile).toBeVisible();
         
-        await registerPage.signup("Ahmed","abdelnaby@gmail.com");
+        await registerPage.signup("Ahmed","abdelnaby3@gmail.com");
         
         await expect(registerPage.accInfoHeading).toBeVisible();
         await expect(registerPage.accInfoHeading).toContainText('Enter Account Information');
@@ -42,13 +42,27 @@ test.describe('Register Suite',() =>{
         // await page.pause();
         await expect(homePage.user).toContainText('Logged in as');
 
-        // await homePage.deleteAccount();
+        await homePage.deleteAccount();
 
-        // await expect(registerPage.accountMsg).toBeVisible();
-        // expect(registerPage.accountMsg).toContainText("Account Deleted!");
+        await expect(registerPage.accountMsg).toBeVisible();
+        expect(registerPage.accountMsg).toContainText("Account Deleted!");
 
-        // await registerPage.continue();
+        await registerPage.continue();
     
     });
-   
+    
+    test('TC001 - it can not register with email already exists',async({homePage,registerPage,page}) =>{
+        await page.goto(homePage.url);
+
+        await expect(page).toHaveTitle("Automation Exercise");
+
+        await homePage.clickLoginLink();
+    
+        await expect(registerPage.signUpForm).toBeVisible();
+        await expect(registerPage.signUpFormTitile).toBeVisible();
+        
+        await registerPage.signup("Ahmed","abdelnaby@gmail.com");
+        
+        await expect(registerPage.signupErrorMsg).toContainText("Email Address already exist!");
+    });
 });
