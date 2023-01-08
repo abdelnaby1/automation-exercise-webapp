@@ -17,10 +17,13 @@ test.describe('Login Suite',() =>{
 
         await loginPage.login("abdelnaby@gmail.com","123456");
         await expect(homePage.user).toContainText('Logged in as');
-        
-        await homePage.deleteAccount();
 
-        await expect(loginPage.accountMsg).toContainText("Account Deleted!");
+        await page.context().storageState({path: 'storagestate.json'});
+         
+        
+        // await homePage.deleteAccount();
+
+        // await expect(loginPage.accountMsg).toContainText("Account Deleted!");
     });
 
     test('TC003 - it sohuld not login with invalid credidential',async({page,loginPage,homePage}) =>{
@@ -38,7 +41,9 @@ test.describe('Login Suite',() =>{
         await expect(loginPage.loginErrorMsg).toContainText("Your email or password is incorrect!");
         
 
-    })
+    });
+
+    
 });
 
 // abdelnaby@gmail.com
