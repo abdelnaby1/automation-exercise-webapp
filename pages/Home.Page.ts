@@ -10,7 +10,7 @@ class Home{
     readonly user: Locator;
     readonly logoutLink: Locator
 
-
+    readonly contactUsLink: Locator;
     
     constructor(page: Page){
         this.page = page;
@@ -18,6 +18,7 @@ class Home{
         this.deleteAccBtn = this.page.locator('a[href="/delete_account"]');    
         this.user = this.page.locator("a",{has: this.page.locator("//i[@class='fa fa-user']")});
         this.logoutLink = this.page.locator("a[href='/logout']");
+        this.contactUsLink = this.page.locator('a[href="/contact_us"]')
     }
 
     async clickLoginLink(){
@@ -28,6 +29,9 @@ class Home{
     }
     async clickLogoutLink(){
         await this.logoutLink.click();
+    }
+    async clickContactUsLink(){
+        await this.contactUsLink.click();
     }
 }
 export default Home
