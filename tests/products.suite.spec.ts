@@ -19,7 +19,7 @@ test.describe('Products Suite',() =>{
         expect(await prodcutsPage.products.count()).toBe(data.products.length);
         
     });
-    test.only('TC009 - it should show product details on clicking on view product',async({page,homePage,prodcutsPage,productDetailsPage}) =>{
+    test('TC009 - it should show product details on clicking on view product',async({page,homePage,prodcutsPage,productDetailsPage}) =>{
        
         await page.goto(homePage.url);
         await homePage.clickProductsLink();
