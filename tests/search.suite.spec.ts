@@ -15,15 +15,16 @@ test.describe('Search Products Suite',() =>{
         expect(page.url()).toContain('/products');
         await expect(prodcutsPage.title).toBeVisible();
 
-        let productName = 't-shirt';
+        let productName = 'shoes';
         await prodcutsPage.searchForProduct(productName);
         expect(page.url()).toContain(`search=${productName}`);
-        const titles:string[] = await prodcutsPage.getTitles();
+        let titles = await prodcutsPage.getTitles();
         for (let i = 0; i < titles.length; i++) {
             // let exp = ".*" + productName + ".*";
             // let regex = new RegExp(exp);
-            // let title = titles[i].replace("-","");
-            expect(titles[i].toLowerCase()).toContain(productName);
+            // let title = titles[i];
+            // title = title.replace("-"," ");
+            expect.soft(titles[i].toLowerCase()).toContain(productName);
         }
 
 

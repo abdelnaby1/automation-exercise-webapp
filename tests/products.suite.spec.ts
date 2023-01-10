@@ -1,7 +1,7 @@
 import {test,expect} from "../fixtures/pageFixtures"
 
 
-test.describe.configure({ mode: 'serial' });
+// test.describe.configure({ mode: 'serial' });
 test.describe('Products Suite',() =>{
 
     test('TC008 - all products should be visible successfully',async({page,homePage,prodcutsPage,request}) =>{

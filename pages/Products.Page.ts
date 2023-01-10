@@ -36,9 +36,9 @@ class Products{
     async getTitles(){
         const count = await this.productsTitles.count();
         
-        let titles = new Array();
+        let titles = new Array<string>();
         for (let i = 0; i < count; i++) {
-            titles.push(await this.productsTitles.nth(i).textContent());
+            titles.push(await this.productsTitles.nth(i).textContent() as string);
         }
         return titles
     }
