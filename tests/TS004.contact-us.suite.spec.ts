@@ -1,14 +1,14 @@
 import {test,expect} from "../fixtures/pageFixtures"
 
-
 test.describe('Contact Us Suite',() =>{
-
     test('TC006 - it should contact with us successfully',async({page,homePage,contactUsPage}) =>{
        
-        await page.goto(homePage.url);
+        await page.goto(homePage.url,{ waitUntil: 'domcontentloaded' });
+
         await homePage.clickContactUsLink();
 
         expect(page.url()).toContain("/contact_us");
+        
         await expect(contactUsPage.title).toBeVisible();
         await expect(contactUsPage.title).toContainText('Get In Touch');
      
@@ -18,5 +18,6 @@ test.describe('Contact Us Suite',() =>{
         await contactUsPage.clickHomeBtn();
         expect(page.url()).toBe('https://automationexercise.com/');
     });
+
 
 });

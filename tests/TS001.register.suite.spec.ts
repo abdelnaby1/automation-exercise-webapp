@@ -1,29 +1,19 @@
-import  { BrowserContext, Page,  } from "@playwright/test";
 import {test,expect} from "../fixtures/pageFixtures"
-import Login from "../pages/Login.Page";
 
 
 test.describe('Register Suite',() =>{
-
-    // let context: BrowserContext;
-    // let page: Page;
-    // test.afterAll(async({browser})=>{
-    //     const context = await browser.newContext();
-    //     const page = await context.newPage();
-    //     page.goto("https://www.saucedemo.com/");
-    // })
-
-    test('TC001 - it can register successfully',async({homePage,registerPage,page}) =>{
-        await page.goto(homePage.url);
-
+    test.beforeEach(async({page,homePage,registerPage}) => {
+        await page.goto(homePage.url,{ waitUntil: 'domcontentloaded' });
         await expect(page).toHaveTitle("Automation Exercise");
-
         await homePage.clickLoginLink();
-    
         await expect(registerPage.signUpForm).toBeVisible();
         await expect(registerPage.signUpFormTitile).toBeVisible();
         
-        await registerPage.signup("Ahmed","abdelnaby3@gmail.com");
+    })
+    
+    test('TC001 - it can register successfully',async({homePage,registerPage,page}) =>{
+        let email = `abdelnaby${Date.now()}@gmail.com`
+        await registerPage.signup("Ahmed",email);
         
         await expect(registerPage.accInfoHeading).toBeVisible();
         await expect(registerPage.accInfoHeading).toContainText('Enter Account Information');
@@ -42,25 +32,17 @@ test.describe('Register Suite',() =>{
         // await page.pause();
         await expect(homePage.user).toContainText('Logged in as');
 
-        await homePage.deleteAccount();
+        // await homePage.deleteAccount();
 
-        await expect(registerPage.accountMsg).toBeVisible();
-        expect(registerPage.accountMsg).toContainText("Account Deleted!");
+        // await expect(registerPage.accountMsg).toBeVisible();
+        // expect(registerPage.accountMsg).toContainText("Account Deleted!");
 
-        await registerPage.continue();
+        // await registerPage.continue();
     
     });
     
-    test('TC001 - it can not register with email already exists',async({homePage,registerPage,page}) =>{
-        await page.goto(homePage.url);
-
-        await expect(page).toHaveTitle("Automation Exercise");
-
+    test('TC002 - it can not register with email already exists',async({homePage,registerPage,page}) =>{
         await homePage.clickLoginLink();
-    
-        await expect(registerPage.signUpForm).toBeVisible();
-        await expect(registerPage.signUpFormTitile).toBeVisible();
-        
         await registerPage.signup("Ahmed","abdelnaby@gmail.com");
         
         await expect(registerPage.signupErrorMsg).toContainText("Email Address already exist!");

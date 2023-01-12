@@ -13,6 +13,9 @@ class Products{
 
     readonly productsTitles: Locator;
 
+    // readonly addToCartBtn: Locator;
+    readonly model: Locator;
+
     constructor(page: Page){
         this.page = page;
         this.title = this.page.locator('.features_items h2.title');
@@ -22,7 +25,10 @@ class Products{
         this.searchInput = this.page.locator('#search_product');
         this.searchBtn = this.page.locator('#submit_search');
 
-        this.productsTitles = this.products.locator('.productinfo p')
+        this.productsTitles = this.products.locator('.productinfo p');
+        // this.addToCartBtn = this.products.locator('a',{hasText:'Add to cart'});
+        
+        this.model = this.page.locator('#cartModal');
     }
 
     async goToProductDetails(idx: number){
@@ -41,6 +47,19 @@ class Products{
             titles.push(await this.productsTitles.nth(i).textContent() as string);
         }
         return titles
+    }
+    async addToCart(idx: number){
+        await this.products.nth(idx).hover();
+        await this.products.nth(idx).locator('.overlay-content a',{hasText:'Add to cart'}).click()
+        await this.clcikContinueShopping();
+        
+    }
+    async clcikContinueShopping(){
+        await this.model.locator('button',{hasText:'Continue Shopping'}).click();
+    }
+
+    async getProductPrice(idx: number){
+        return await this.products.locator('.productinfo h2').textContent();
     }
 }
 
