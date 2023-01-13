@@ -57,7 +57,10 @@ class Products{
     async clcikContinueShopping(){
         await this.model.locator('button',{hasText:'Continue Shopping'}).click();
     }
+    async clickVieWCart(){
+        await this.model.locator('a[href="/view cart"]').click();
 
+    }
     async getProductPrice(idx: number){
         return await this.products.locator('.productinfo h2').textContent();
     }

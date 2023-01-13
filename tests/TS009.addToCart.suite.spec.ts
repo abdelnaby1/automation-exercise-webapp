@@ -3,12 +3,13 @@ import {test,expect} from "../fixtures/pageFixtures"
 import {getAllProducts} from "../utils/getAllProducts"
 test.describe('Add To Cart Suite',() =>{
 
-    test('TC014 - it should add product to the cart successfully',async({page,homePage,prodcutsPage,cartPage}) =>{
-       
+    test.beforeEach(async({page,homePage}) => {
         await page.goto(homePage.url,{ waitUntil: 'domcontentloaded' });
-
         await expect(page).toHaveTitle("Automation Exercise");
 
+    })
+
+    test('TC014 - it should add product to the cart successfully',async({homePage,prodcutsPage,cartPage}) =>{
         await homePage.clickProductsLink();
         let i:number
         for (i = 0; i < 2; i++) {
@@ -35,4 +36,17 @@ test.describe('Add To Cart Suite',() =>{
             expect(cartItem.total).toContain((qty  * priceInteger) + "");
         }
     });
+
+    test('TC015 - it should add product with specified quantity to the cart successfully',async({page,homePage,prodcutsPage,productDetailsPage,cartPage}) =>{
+        await homePage.clickProductsLink();
+        await prodcutsPage.goToProductDetails(0);
+
+        let qty = "4"
+        await productDetailsPage.addToCartWithQty(qty);
+        await productDetailsPage.clickVieWCart();
+
+        let cartitem = await cartPage.getItemInfo(0);
+        expect(cartitem.qty).toBe(qty);
+    });
+
 });
