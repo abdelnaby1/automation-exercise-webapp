@@ -22,6 +22,8 @@ class Home{
     readonly subscribeMsg: Locator;
     
     readonly cartLink: Locator;
+    readonly addToCartBtn: Locator;
+
 
     
     constructor(page: Page){
@@ -39,6 +41,9 @@ class Home{
         this.subscribeBtn = this.page.locator('#subscribe');
         this.subscribeMsg = this.page.locator('#success-subscribe .alert');
         this.cartLink = this.page.locator('.nav a[href="/view_cart"]');
+
+        this.addToCartBtn = this.page.locator("//a[text()[normalize-space()='Add to cart']]");
+
     }
 
     async clickLoginLink(){

@@ -3,11 +3,14 @@ import { Locator, Page } from "@playwright/test/types/test"
 class Cart{
 
     readonly page: Page;
+    readonly cart: Locator
     readonly cartItems: Locator;
+
 
     constructor(page: Page){
         this.page = page;
-        this.cartItems = this.page.locator('.cart_info tbody tr');
+        this.cart = this.page.locator('#cart_info_table');
+        this.cartItems = this.cart.locator('tbody tr');
     }
     async getItemInfo(idx: number){
        let price = await this.cartItems.nth(idx).locator('.cart_price p').textContent()  as string;
@@ -21,5 +24,11 @@ class Cart{
        }
        return item
     }
+    async deleteItem(idx: number){
+        await this.cartItems.nth(idx).locator(".cart_delete a").click();
+
+    }
+   
+    
 }
 export default Cart

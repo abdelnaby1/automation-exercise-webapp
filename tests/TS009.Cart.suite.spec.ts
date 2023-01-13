@@ -48,5 +48,18 @@ test.describe('Add To Cart Suite',() =>{
         let cartitem = await cartPage.getItemInfo(0);
         expect(cartitem.qty).toBe(qty);
     });
+    test('TC016 - it should delete product from the cart successfully',async({page,homePage,prodcutsPage,cartPage}) =>{
+        await homePage.clickProductsLink();
+        await prodcutsPage.addToCart(0);
+        await homePage.clickCartLink();
+        // await prodcutsPage.clickVieWCart();
+        await expect(cartPage.cart).toBeVisible();
+        await cartPage.deleteItem(0);
+
+        await expect(cartPage.cart).toBeHidden();
+        
+        
+
+    });
 
 });
