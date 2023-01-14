@@ -34,10 +34,10 @@ class ContactUs{
         this.page.on("filechooser", async (filechooser) => {
             await filechooser.setFiles(file);
         });
+        await this.fileField.click();
         this.page.on("dialog", async (dialog) =>{
             await dialog.accept();
         })
-        await this.fileField.click();
         await this.submitBtn.click();
     }
     async clickHomeBtn(){

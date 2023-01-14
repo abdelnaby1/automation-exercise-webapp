@@ -9,7 +9,7 @@ test.describe('Add To Cart Suite',() =>{
 
     })
 
-    test('TC014 - it should add product to the cart successfully',async({homePage,prodcutsPage,cartPage}) =>{
+    test('TC013 - it should add product to the cart successfully',async({homePage,prodcutsPage,cartPage}) =>{
         await homePage.clickProductsLink();
         let i:number
         for (i = 0; i < 2; i++) {
@@ -37,7 +37,7 @@ test.describe('Add To Cart Suite',() =>{
         }
     });
 
-    test('TC015 - it should add product with specified quantity to the cart successfully',async({page,homePage,prodcutsPage,productDetailsPage,cartPage}) =>{
+    test('TC014 - it should add product with specified quantity to the cart successfully',async({page,homePage,prodcutsPage,productDetailsPage,cartPage}) =>{
         await homePage.clickProductsLink();
         await prodcutsPage.goToProductDetails(0);
 
@@ -48,7 +48,7 @@ test.describe('Add To Cart Suite',() =>{
         let cartitem = await cartPage.getItemInfo(0);
         expect(cartitem.qty).toBe(qty);
     });
-    test('TC016 - it should delete product from the cart successfully',async({page,homePage,prodcutsPage,cartPage}) =>{
+    test('TC015 - it should delete product from the cart successfully',async({page,homePage,prodcutsPage,cartPage}) =>{
         await homePage.clickProductsLink();
         await prodcutsPage.addToCart(0);
         await homePage.clickCartLink();

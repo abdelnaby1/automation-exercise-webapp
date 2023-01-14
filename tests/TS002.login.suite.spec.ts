@@ -12,11 +12,6 @@ test.describe('Login Suite',() =>{
         await expect(loginPage.loginFormTitile).toContainText('Login to your account');
     })
 
-    test.beforeEach(async({page,homePage}) => {
-      
-        
-    })
-
     test('TC003 - it sohuld login with valid credidential',async({page,loginPage,homePage}) =>{
         await loginPage.login("abdelnaby4@gmail.com","123456");
         await expect(homePage.user).toContainText('Logged in as');

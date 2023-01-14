@@ -24,7 +24,13 @@ class Home{
     readonly cartLink: Locator;
     readonly addToCartBtn: Locator;
 
+    readonly categories: Locator;
 
+    private readonly categoriesMap = {
+        'Women': 0,
+        'Men':1,
+        'Kids':2
+    }
     
     constructor(page: Page){
         this.page = page;
@@ -44,6 +50,7 @@ class Home{
 
         this.addToCartBtn = this.page.locator("//a[text()[normalize-space()='Add to cart']]");
 
+        this.categories = this.page.locator("#accordian .panel")
     }
 
     async clickLoginLink(){
@@ -75,6 +82,10 @@ class Home{
 
     async clickCartLink(){
         await this.cartLink.click();
+    }
+    async clickCategory(category: string,subcategory:string){
+        await this.categories.nth(this.categoriesMap[category]).locator(`a[href="#${category}"]`).click();
+        await this.page.locator(`#${category} a`,{hasText:`${subcategory}`}).click();
     }
 }
 export default Home
