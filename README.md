@@ -1,1 +1,1 @@
-# test automation exercies using playwright tool with typescript
+# test automation exercise using playwright tool with typescript
