@@ -3,7 +3,7 @@ import {test,expect} from "../fixtures/pageFixtures"
 test.describe('Contact Us Suite',() =>{
     test('TC006 - it should contact with us successfully',async({page,homePage,contactUsPage}) =>{
        
-        await page.goto(homePage.url);
+        await page.goto(homePage.url,{waitUntil:"domcontentloaded"});
 
         await homePage.clickContactUsLink();
 

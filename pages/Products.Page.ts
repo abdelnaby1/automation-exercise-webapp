@@ -16,6 +16,19 @@ class Products{
     // readonly addToCartBtn: Locator;
     readonly model: Locator;
 
+    readonly brands: Locator;
+
+    private readonly brandsMap = {
+        'Polo': 0,
+        'H&M': 1,
+        'Madame':2,
+        'Mast & Harbour':3,
+        'Babyhug':4,
+        'Allen Solly Junior':5,
+        'Kookie Kids':6,
+        'Biba':7        
+    }
+
     constructor(page: Page){
         this.page = page;
         this.title = this.page.locator('.features_items h2.title');
@@ -29,6 +42,8 @@ class Products{
         // this.addToCartBtn = this.products.locator('a',{hasText:'Add to cart'});
         
         this.model = this.page.locator('#cartModal');
+    
+        this.brands = this.page.locator('.brands-name ul li');
     }
 
     async goToProductDetails(idx: number){
@@ -63,6 +78,9 @@ class Products{
     }
     async getProductPrice(idx: number){
         return await this.products.locator('.productinfo h2').textContent();
+    }
+    async clickBrand(brand: string){
+        await this.brands.nth(this.brandsMap[brand]).locator('a').click();
     }
 }
 
