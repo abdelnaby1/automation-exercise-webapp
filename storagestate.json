@@ -2,20 +2,280 @@
   "cookies": [
     {
       "name": "csrftoken",
-      "value": "dRuk8mTuQMx1SARMJkD9reJIcEDfUNfkq00KjsZGOxuFLXTPiG7hlP3FUaTgQNXu",
+      "value": "839Y5rYt9BRYvYRZ12kfvVdF3NTBC7F9Qnuhlb82GuD5yGREXhIUCBUYdQmA40wS",
       "domain": "automationexercise.com",
       "path": "/",
-      "expires": 1705175138.320521,
+      "expires": 1705442144.308474,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
+      "name": "__gads",
+      "value": "ID=0a2974d919076a61-220c30941cdb0032:T=1673992535:RT=1673992535:S=ALNI_Maq_gZnmq2as81V42KpPrarGuBBug",
+      "domain": ".automationexercise.com",
+      "path": "/",
+      "expires": 1707688535,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__gpi",
+      "value": "UID=00000bc475c08f49:T=1673992535:RT=1673992535:S=ALNI_MY3XhUwb891cA4Nkii1eN-bfsvscA",
+      "domain": ".automationexercise.com",
+      "path": "/",
+      "expires": 1707688535,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUlofkEqk5B1zkqmWb7l69zdZDNHOs9dCxfetXSETl0P4eoi0CXxR4bBHNAtfzg",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1708552537.406654,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "15a49f17-180a-4982-9636-b738f3f37e16|1673992541",
+      "domain": ".openx.net",
+      "path": "/",
+      "expires": 1705528540.405795,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "mc",
+      "value": "63c7195d-6e4aa-e3079-b7f50",
+      "domain": ".quantserve.com",
+      "path": "/",
+      "expires": 1708206940.526409,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KTPCACOOKIE",
+      "value": "YES",
+      "domain": ".pubmatic.com",
+      "path": "/",
+      "expires": 1674078940.727548,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "id",
+      "value": "10813846394472861320",
+      "domain": ".mookie1.com",
+      "path": "/",
+      "expires": 1708120540.894956,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "mdata",
+      "value": "1|10813846394472861320|1673992541863",
+      "domain": ".mookie1.com",
+      "path": "/",
+      "expires": 1708120540.895027,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ov",
+      "value": "25a87b164e229dbd9dbf314518c19231",
+      "domain": ".mookie1.com",
+      "path": "/",
+      "expires": 1708120540.895064,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMID",
+      "value": "Y8cZXXBM3itTv14q4Nt4aAAA",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1705528541.665468,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMPS",
+      "value": "1844",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1681768540.932313,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMPRO",
+      "value": "1844",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1681768541.665533,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "na_tc",
+      "value": "Y",
+      "domain": ".e.dlx.addthis.com",
+      "path": "/",
+      "expires": 1708206941.100632,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "DSID",
+      "value": "NO_DATA",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1673996141.668552,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KADUSERCOOKIE",
+      "value": "53B89FDE-DB6E-4850-8121-78C5F803A2BA",
+      "domain": ".pubmatic.com",
+      "path": "/",
+      "expires": 1705528541.415346,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "rlas3",
+      "value": "xBg8n2HK919a3THaPYzQZyTYMSPplavLChAvKiQQQUg=",
+      "domain": ".rlcdn.com",
+      "path": "/",
+      "expires": 1705528541.661761,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "pxrc",
+      "value": "CN6ynJ4GEgUI6AcQABIGCOndKhAA",
+      "domain": ".rlcdn.com",
+      "path": "/",
+      "expires": 1679176541.661844,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uuid",
+      "value": "824c727e-9b37-4f61-98b9-6115d2453a44-20230117 16:55:42",
+      "domain": ".innovid.com",
+      "path": "/",
+      "expires": 1681768541.770796,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "na_id",
+      "value": "2023011721554200066051267338",
+      "domain": ".addthis.com",
+      "path": "/",
+      "expires": 1708206941.829606,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "na_tc",
+      "value": "Y",
+      "domain": ".addthis.com",
+      "path": "/",
+      "expires": 1708206941.82967,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uid",
+      "value": "63c7195e88a9e570",
+      "domain": ".addthis.com",
+      "path": "/",
+      "expires": 1708206941.829698,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ouid",
+      "value": "63c7195e0001e42f4d7be6a272e5ed7838ba722c3d564c7cd7f1",
+      "domain": ".addthis.com",
+      "path": "/",
+      "expires": 1708206941.829723,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "na_rn",
+      "value": "0",
+      "domain": ".dlx.addthis.com",
+      "path": "/",
+      "expires": 1676584541.829753,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "na_sr",
+      "value": "20230117",
+      "domain": ".dlx.addthis.com",
+      "path": "/",
+      "expires": 1676584541.82978,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "na_srp",
+      "value": "3614",
+      "domain": ".dlx.addthis.com",
+      "path": "/",
+      "expires": 1673992601.829806,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "na_sc_e",
+      "value": "0",
+      "domain": ".dlx.addthis.com",
+      "path": "/",
+      "expires": 1676584541.829831,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
       "name": "sessionid",
-      "value": "atdkiu32uukwazsxqyf6kfuuf7pg8ps9",
+      "value": "l5tixqcpqlgssvb90oatamf08w54jzhi",
       "domain": "automationexercise.com",
       "path": "/",
-      "expires": 1674935138.028591,
+      "expires": 1675202143.488502,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"
@@ -27,7 +287,15 @@
       "localStorage": [
         {
           "name": "google_experiment_mod44",
-          "value": "366"
+          "value": "862"
+        },
+        {
+          "name": "google_ama_config",
+          "value": "[[[[null,0,null,[],null,null,\"BODY\"],2,[\"10px\",\"10px\",true],[4],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget\"],1,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],2,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],3,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],4,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY\"],3,[\"10px\",\"10px\",true],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY>FOOTER#footer\"],1,[\"10px\",\"10px\",false],[0],null,[],[],1,[],[2,4],[]],[[null,0,null,[],null,null,\"DIV#accordian\"],4,[\"10px\",\"35px\",false],[0],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY>SECTION>DIV.container>DIV.row>DIV\"],3,[\"10px\",\"10px\",false],[0],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#slider-carousel\"],4,[\"10px\",\"10px\",true],[1],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"SECTION#form\"],4,[\"10px\",\"185px\",true],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#recommended-item-carousel>DIV.carousel-inner>DIV.item.active>DIV\"],4,[\"10px\",\"10px\",false],[0],null,[],[],2,[[\"c7dd78e6\",1600,[[\"box-sizing\",\"content-box\"],[\"width\",\"33.3333%\"],[\"height\",\"388px\"],[\"margin\",\"0px 0px 0px 0px\"],[\"float\",\"left\"]],[[\"width\",\"100%\"],[\"height\",\"100%\"],[\"display\",\"inline-block\"]]]],[],[]],[[null,2,null,[],null,null,\"DIV#recommended-item-carousel>DIV.carousel-inner>DIV.item.active>DIV\"],4,[\"10px\",\"10px\",false],[0],null,[],[],2,[[\"608ddd08\",1600,[[\"box-sizing\",\"content-box\"],[\"width\",\"33.3333%\"],[\"height\",\"388px\"],[\"margin\",\"0px 0px 0px 0px\"],[\"float\",\"left\"]],[[\"width\",\"100%\"],[\"height\",\"100%\"],[\"display\",\"inline-block\"]]]],[],[]]],[],[1674078946852],\"20230111_093502\",[],[[]],[[null,[1,3,2],null,\"4334590153\",[],[],[0,2],true,null,[1],[]]],[null,[[1,\"1vp\",[[4,\"2vp\",\"2vp\"],[6,\"3vp\",\"3vp\"]],8,\"1vp\",0.30000001,[\"0.2vp\",\"0vp\",2]],[2,\"300px\",[[4,\"600px\",\"600px\"],[6,\"900px\",\"900px\"]],8,\"300px\",0.30000001,[\"60px\",\"0px\",2]]]],null,null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,null,false,null,null,false,null,null,null,null,null,null,null,null],null,null,null,null,[1744980329],null,null,[1673862377570]]"
+        },
+        {
+          "name": "google_adsense_settings",
+          "value": "{\"ca-pub-1677597403311019\":[\"ca-pub-1677597403311019\",[],[]]}"
         }
       ]
     }

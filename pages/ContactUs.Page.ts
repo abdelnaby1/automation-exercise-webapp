@@ -32,6 +32,7 @@ class ContactUs{
         await this.subjectField.fill(subject);
         await this.messageField.fill(message);
         this.page.on("filechooser", async (filechooser) => {
+            await filechooser.element().waitForElementState('visible')
             await filechooser.setFiles(file);
         });
         await this.fileField.click();

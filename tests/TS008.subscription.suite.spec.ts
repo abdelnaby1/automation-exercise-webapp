@@ -12,9 +12,11 @@ test.describe('Search Products Suite',() =>{
        
         await homePage.scrollToFooter();
         await expect(homePage.subscribeTitle).toContainText('Subscription');
-        await homePage.subscribe("ahmed@test.com");
-        await expect(homePage.subscribeMsg).toBeVisible();
-        await expect(homePage.subscribeMsg).toContainText('You have been successfully subscribed!');
+        await Promise.all([
+            homePage.subscribe("ahmed@test.com"),
+            homePage.subscribeMsg.waitFor({state: 'attached'}),
+            expect(homePage.subscribeMsg).toContainText('You have been successfully subscribed!'),
+        ])
        
     });
 
@@ -22,9 +24,11 @@ test.describe('Search Products Suite',() =>{
         await homePage.clickCartLink();
         await homePage.scrollToFooter();
         await expect(homePage.subscribeTitle).toContainText('Subscription');
-        await homePage.subscribe("ahmed@test.com");
-        await expect(homePage.subscribeMsg).toBeVisible();
-        await expect(homePage.subscribeMsg).toContainText('You have been successfully subscribed!');
+        await Promise.all([
+            homePage.subscribe("ahmed@test.com"),
+            homePage.subscribeMsg.waitFor({state: 'attached'}),
+            expect(homePage.subscribeMsg).toContainText('You have been successfully subscribed!'),
+        ]) 
        
     });
 

@@ -19,7 +19,7 @@ test.describe('Logout Suite',() =>{
 
         await homePage.clickLogoutLink();
 
-        expect(page).toHaveURL(/(.*)\/login/);
+        await expect(page).toHaveURL(/(.*)\/login/);
     });
 
 });

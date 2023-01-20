@@ -29,7 +29,6 @@ test.describe('Register Suite',() =>{
     
 
         await registerPage.continue();
-        // await page.pause();
         await expect(homePage.user).toContainText('Logged in as');
 
         // await homePage.deleteAccount();
