@@ -9,7 +9,7 @@ test.describe('Add To Cart Suite',() =>{
 
     })
 
-    test('TC013 - it should add product to the cart successfully',async({homePage,prodcutsPage,cartPage}) =>{
+    test('TC013 - it should add product to the cart successfully',async({page,homePage,prodcutsPage,cartPage}) =>{
         await homePage.clickProductsLink();
         let i:number
         for (i = 0; i < 2; i++) {
@@ -18,6 +18,8 @@ test.describe('Add To Cart Suite',() =>{
         for (i = 0; i < 2; i++) {
             await prodcutsPage.addToCart(i);
         }
+        await page.context().storageState({path: 'cart.json'});
+
         await homePage.clickCartLink();
 
         let cartItems = await cartPage.cartItems.count();

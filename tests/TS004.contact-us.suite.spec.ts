@@ -11,12 +11,12 @@ test.describe('Contact Us Suite',() =>{
         
         await expect(contactUsPage.title).toBeVisible();
         await expect(contactUsPage.title).toContainText('Get In Touch');
-        await Promise.all([
-            contactUsPage.fillTheForm("Ahmed","ahmed@gmail.com","Test Automation","Thanks for this project it helped me a lot","rest.jpg"),
-            contactUsPage.status.waitFor({state: 'attached'}),
-            expect(contactUsPage.status).toContainText('Success! Your details have been submitted successfully.'),
-        ])
-        
+        page.on("dialog", async (dialog) =>{
+            await dialog.accept();
+        })
+        await contactUsPage.fillTheForm("Ahmed","ahmed@gmail.com","Test Automation","Thanks for this project it helped me a lot","rest.jpg");
+        await contactUsPage.status.waitFor({state: 'visible'});
+        await expect(contactUsPage.status).toContainText('Success! Your details have been submitted successfully.');
         await contactUsPage.clickHomeBtn();
         expect(page.url()).toBe('https://automationexercise.com/');
     });

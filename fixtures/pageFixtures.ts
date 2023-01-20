@@ -6,6 +6,7 @@ import ContactUs from "../pages/ContactUs.Page";
 import Products from "../pages/Products.Page";
 import ProductDetails from "../pages/ProductDetails.Page";
 import Cart from "../pages/Cart.Page";
+import Checkout from "../pages/Checkout.Page";
 
 type pages = {
     registerPage: Register,
@@ -14,7 +15,8 @@ type pages = {
     contactUsPage: ContactUs,
     prodcutsPage: Products,
     productDetailsPage: ProductDetails,
-    cartPage: Cart;
+    cartPage: Cart,c
+    checkoutPage: Checkout
 }
 export const test = base.extend<pages>({
         registerPage: async({page},use) => {
@@ -37,6 +39,9 @@ export const test = base.extend<pages>({
         },
         cartPage: async({page},use) => {
             await use(new Cart(page));
+        },
+        checkoutPage: async({page},use) => {
+            await use(new Checkout(page));
         },
         
 })

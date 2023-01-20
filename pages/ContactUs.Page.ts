@@ -23,7 +23,7 @@ class ContactUs{
         this.fileField = this.page.locator('input[name="upload_file"]');
         this.submitBtn = this.page.locator('input[data-qa="submit-button"]');
 
-        this.status = this.page.locator('.status');
+        this.status = this.page.locator('.status.alert-success');
         this.homeBtn = this.page.locator('#form-section a[href="/"]');
     }
     async fillTheForm(name: string,email: string,subject: string,message: string,file: string){
@@ -36,9 +36,6 @@ class ContactUs{
             await filechooser.setFiles(file);
         });
         await this.fileField.click();
-        this.page.on("dialog", async (dialog) =>{
-            await dialog.accept();
-        })
         await this.submitBtn.click();
     }
     async clickHomeBtn(){

@@ -37,8 +37,8 @@ const config: PlaywrightTestConfig = {
   use: {
     // channel: "chrome",
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    // headless: false,
+    // video: 'retain-on-failure',
+    headless: false,
     baseURL: 'https://automationexercise.com',
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
