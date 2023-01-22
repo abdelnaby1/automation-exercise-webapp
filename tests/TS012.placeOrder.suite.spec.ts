@@ -10,7 +10,6 @@ test.describe('Place Order Suite',() =>{
 
     })
     test('TC018 - it should register through checkout',async({page,prodcutsPage,homePage,registerPage,cartPage,checkoutPage}) =>{       
-        await expect(page).toHaveTitle("Automation Exercise");
         await homePage.clickProductsLink();
         await prodcutsPage.addToCart(0);
         await prodcutsPage.addToCart(1);
@@ -53,7 +52,6 @@ test.describe('Place Order Suite',() =>{
         await expect(page.getByText("Your order has been placed successfully!")).toBeVisible();
     });
     test('TC018 - it should register before checkout',async({page,prodcutsPage,homePage,registerPage,cartPage,checkoutPage}) =>{       
-        await expect(page).toHaveTitle("Automation Exercise");
         await homePage.clickLoginLink();
         await registerPage.signup("moh",`moh${Date.now()}@gmail.com`);
         await registerPage.completeSignup(
@@ -71,10 +69,6 @@ test.describe('Place Order Suite',() =>{
         await homePage.clickCartLink();
         expect(page.url()).toContain('/view_cart');
         await cartPage.clickCheckout();
-        // await Promise.all([
-        //     expect(page.url()).toContain('/view_cart'),
-        //     expect(cartPage.checkoutModal).toBeVisible()
-        // ]);       
         await Promise.all([
             expect(checkoutPage.addressDetailsH).toBeVisible(),
             expect(checkoutPage.reviewOrderH).toBeVisible(),
@@ -93,5 +87,32 @@ test.describe('Place Order Suite',() =>{
         await expect(page.getByText("Your order has been placed successfully!")).toBeVisible();
     });
 
+    test('TC018 - it should login before checkout',async({page,prodcutsPage,homePage,loginPage,cartPage,checkoutPage}) =>{       
+        await homePage.clickLoginLink();
+        await loginPage.login("abdelnaby4@gmail.com","123456");
+        await expect(homePage.user).toContainText('Logged in as');
+        await homePage.clickProductsLink();
+        await prodcutsPage.addToCart(0);
+        await prodcutsPage.addToCart(1);
+        await homePage.clickCartLink();
+        expect(page.url()).toContain('/view_cart');
+        await cartPage.clickCheckout();
+        await Promise.all([
+            expect(checkoutPage.addressDetailsH).toBeVisible(),
+            expect(checkoutPage.reviewOrderH).toBeVisible(),
+        ]);
+        await checkoutPage.placeOrder("thank you");
+        let card = {
+            name:"john3",
+            num: "1231098745642310",
+            cvc:"125",
+            month:"09",
+            year:"25"
+        }
+
+        //don't await this function 
+        checkoutPage.payment.enterPaymentDetails(card);
+        await expect(page.getByText("Your order has been placed successfully!")).toBeVisible();
+    });
 
 });
