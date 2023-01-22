@@ -51,7 +51,7 @@ test.describe('Place Order Suite',() =>{
         checkoutPage.payment.enterPaymentDetails(card);
         await expect(page.getByText("Your order has been placed successfully!")).toBeVisible();
     });
-    test('TC018 - it should register before checkout',async({page,prodcutsPage,homePage,registerPage,cartPage,checkoutPage}) =>{       
+    test('TC019 - it should register before checkout',async({page,prodcutsPage,homePage,registerPage,cartPage,checkoutPage}) =>{       
         await homePage.clickLoginLink();
         await registerPage.signup("moh",`moh${Date.now()}@gmail.com`);
         await registerPage.completeSignup(
@@ -87,7 +87,7 @@ test.describe('Place Order Suite',() =>{
         await expect(page.getByText("Your order has been placed successfully!")).toBeVisible();
     });
 
-    test('TC018 - it should login before checkout',async({page,prodcutsPage,homePage,loginPage,cartPage,checkoutPage}) =>{       
+    test('TC012 - it should login before checkout',async({page,prodcutsPage,homePage,loginPage,cartPage,checkoutPage}) =>{       
         await homePage.clickLoginLink();
         await loginPage.login("abdelnaby4@gmail.com","123456");
         await expect(homePage.user).toContainText('Logged in as');
