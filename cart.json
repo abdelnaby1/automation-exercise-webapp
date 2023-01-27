@@ -2,210 +2,60 @@
   "cookies": [
     {
       "name": "csrftoken",
-      "value": "hQMsCa7J4LTAv9UHyZupsN4QcFggaHcbXWkaDzjIyl8IltYDtatYoa81FTV3NSQN",
+      "value": "w6J4wMkXPkdd5igXvdL3IuIlfF5KPbFxhl5KNM9IinJvbf4suNaDc1EwlUeW3zBB",
       "domain": "automationexercise.com",
       "path": "/",
-      "expires": 1705683724.634592,
+      "expires": 1706277499.708528,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "__gads",
-      "value": "ID=71d98190f9507aaa-2283f7e78bda0004:T=1674234125:RT=1674234125:S=ALNI_MbCq_5rA0zrS7Zl2-GqnxUItCFA_Q",
+      "value": "ID=b656c99b450e02f1-228cc774a4da0011:T=1674827900:RT=1674827900:S=ALNI_MaC7xmd6s-oVIhc_gGX_KpDrjWUdw",
       "domain": ".automationexercise.com",
       "path": "/",
-      "expires": 1707930125,
+      "expires": 1708523900,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "__gpi",
-      "value": "UID=00000bc725331198:T=1674234125:RT=1674234125:S=ALNI_MbtBtM2LNk2z4YSEV6iTLVIsVwg1g",
+      "value": "UID=00000993fc55cca9:T=1674827900:RT=1674827900:S=ALNI_MYViLl_cgMT-7gAhJc_BEQOSNL5KQ",
       "domain": ".automationexercise.com",
       "path": "/",
-      "expires": 1707930125,
+      "expires": 1708523900,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "IDE",
-      "value": "AHWqTUlrv1SbrAjlDnBf4fQXNIIj8xHNbvIhOh9I3iYKbZzOcuY3lHW4Yx6rjUOxhg4",
+      "value": "AHWqTUnF9RQqlNPa-16iYNPaCX8mu0IXy4K9FAE-8VbqaBOHdoezmF326Ux10w-3uGI",
       "domain": ".doubleclick.net",
       "path": "/",
-      "expires": 1708794125.681286,
+      "expires": 1709387903.463635,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "i",
-      "value": "0ee589f4-cc68-4b83-81e5-e9e26418dc92|1674234129",
-      "domain": ".openx.net",
+      "name": "DSID",
+      "value": "NO_DATA",
+      "domain": ".doubleclick.net",
       "path": "/",
-      "expires": 1705770128.067823,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "mc",
-      "value": "63cac911-2db28-3388d-50f0a",
-      "domain": ".quantserve.com",
-      "path": "/",
-      "expires": 1708448528.112724,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "KTPCACOOKIE",
-      "value": "YES",
-      "domain": ".pubmatic.com",
-      "path": "/",
-      "expires": 1674320528.128443,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "CMID",
-      "value": "Y8rJEexKZ8VpU37MWgiVpAAA",
-      "domain": ".casalemedia.com",
-      "path": "/",
-      "expires": 1705770128.303647,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "CMPS",
-      "value": "685",
-      "domain": ".casalemedia.com",
-      "path": "/",
-      "expires": 1682010128.144473,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "CMPRO",
-      "value": "685",
-      "domain": ".casalemedia.com",
-      "path": "/",
-      "expires": 1682010128.303709,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "KADUSERCOOKIE",
-      "value": "89A39294-603E-4F2B-80AA-5D393F6F92E5",
-      "domain": ".pubmatic.com",
-      "path": "/",
-      "expires": 1705770128.212021,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "na_tc",
-      "value": "Y",
-      "domain": ".e.dlx.addthis.com",
-      "path": "/",
-      "expires": 1708448528.251685,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "na_id",
-      "value": "2023012017020900014145632355",
-      "domain": ".addthis.com",
-      "path": "/",
-      "expires": 1708448528.48823,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "na_tc",
-      "value": "Y",
-      "domain": ".addthis.com",
-      "path": "/",
-      "expires": 1708448528.488303,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "uid",
-      "value": "63cac911c3938e81",
-      "domain": ".addthis.com",
-      "path": "/",
-      "expires": 1708448528.488335,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "ouid",
-      "value": "63cac91100013e9b42dd5b97852fde61ada2ba81993d32ec9810",
-      "domain": ".addthis.com",
-      "path": "/",
-      "expires": 1708448528.488366,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "na_rn",
-      "value": "0",
-      "domain": ".dlx.addthis.com",
-      "path": "/",
-      "expires": 1676826128.488395,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "na_sr",
-      "value": "20230120",
-      "domain": ".dlx.addthis.com",
-      "path": "/",
-      "expires": 1676826128.488425,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "na_srp",
-      "value": "3614",
-      "domain": ".dlx.addthis.com",
-      "path": "/",
-      "expires": 1674234188.488457,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "na_sc_e",
-      "value": "0",
-      "domain": ".dlx.addthis.com",
-      "path": "/",
-      "expires": 1676826128.488486,
-      "httpOnly": false,
+      "expires": 1674831504.910528,
+      "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "sessionid",
-      "value": "ia2r1t9y0i7n66fq9c735a5edmpneero",
+      "value": "atl6cflkgj5bcmpcfrcjg1q3g8f6agyu",
       "domain": "automationexercise.com",
       "path": "/",
-      "expires": 1675443738.254535,
+      "expires": 1676037513.070569,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"
@@ -217,11 +67,11 @@
       "localStorage": [
         {
           "name": "google_experiment_mod44",
-          "value": "972"
+          "value": "438"
         },
         {
           "name": "google_ama_config",
-          "value": "[[[[null,0,null,[],null,null,\"BODY\"],2,[\"10px\",\"10px\",true],[4],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget\"],1,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],2,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],3,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],4,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY\"],3,[\"10px\",\"10px\",true],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY>FOOTER#footer\"],1,[\"10px\",\"10px\",false],[0],null,[],[],1,[],[2,4],[]],[[null,0,null,[],null,null,\"DIV#accordian\"],4,[\"10px\",\"35px\",false],[0],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#slider-carousel\"],4,[\"10px\",\"10px\",true],[1],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#feedback\"],2,[\"10px\",\"10px\",true],[1],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"SECTION#form\"],4,[\"10px\",\"185px\",true],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#recommended-item-carousel>DIV.carousel-inner>DIV.item.active>DIV\"],4,[\"10px\",\"10px\",false],[0],null,[],[],2,[[\"1b3115e6\",1600,[[\"box-sizing\",\"content-box\"],[\"width\",\"33.3333%\"],[\"height\",\"388px\"],[\"margin\",\"0px 0px 0px 0px\"],[\"float\",\"left\"]],[[\"width\",\"100%\"],[\"height\",\"100%\"],[\"display\",\"inline-block\"]]]],[],[]],[[null,2,null,[],null,null,\"DIV#recommended-item-carousel>DIV.carousel-inner>DIV.item.active>DIV\"],4,[\"10px\",\"10px\",false],[0],null,[],[],2,[[\"93950a5\",1600,[[\"box-sizing\",\"content-box\"],[\"width\",\"33.3333%\"],[\"height\",\"388px\"],[\"margin\",\"0px 0px 0px 0px\"],[\"float\",\"left\"]],[[\"width\",\"100%\"],[\"height\",\"100%\"],[\"display\",\"inline-block\"]]]],[],[]]],[],[1674320525811],\"20230117_093523\",[],[[]],[[null,[1,3,2],null,\"4334590153\",[],[],[0,2],true,null,[1],[]]],[null,[[1,\"1vp\",[[4,\"2vp\",\"2vp\"],[6,\"3vp\",\"3vp\"]],8,\"1vp\",0.30000001,[\"0.2vp\",\"0vp\",2]],[2,\"300px\",[[4,\"600px\",\"600px\"],[6,\"900px\",\"900px\"]],8,\"300px\",0.30000001,[\"60px\",\"0px\",2]]]],null,null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,null,false,null,null,false,null,null,null,null,null,null,null,null],null,null,null,null,[1625170056],null,null,[1674121669832],null,null,[[null,\"300px\",[],null,\"0px\"],true]]"
+          "value": "[[[[null,0,null,[],null,null,\"BODY\"],2,[\"10px\",\"10px\",true],[4],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget\"],1,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],2,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],3,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],4,[\"10px\",\"10px\",false],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY\"],3,[\"10px\",\"10px\",true],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY>FOOTER#footer\"],1,[\"10px\",\"10px\",false],[0],null,[],[],1,[],[2,4],[]],[[null,0,null,[],null,null,\"DIV#accordian\"],4,[\"10px\",\"35px\",false],[0],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#feedback\"],2,[\"10px\",\"10px\",true],[1],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#slider-carousel\"],4,[\"10px\",\"10px\",true],[1],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",false],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"SECTION#form\"],4,[\"10px\",\"185px\",true],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV#recommended-item-carousel>DIV.carousel-inner>DIV.item.active>DIV\"],4,[\"10px\",\"10px\",false],[0],null,[],[],2,[[\"5ad52e55\",1600,[[\"box-sizing\",\"content-box\"],[\"width\",\"33.3333%\"],[\"height\",\"388px\"],[\"margin\",\"0px 0px 0px 0px\"],[\"float\",\"left\"]],[[\"width\",\"100%\"],[\"height\",\"100%\"],[\"display\",\"inline-block\"]]]],[],[]],[[null,2,null,[],null,null,\"DIV#recommended-item-carousel>DIV.carousel-inner>DIV.item.active>DIV\"],4,[\"10px\",\"10px\",false],[0],null,[],[],2,[[\"aa26eaf\",1600,[[\"box-sizing\",\"content-box\"],[\"width\",\"33.3333%\"],[\"height\",\"388px\"],[\"margin\",\"0px 0px 0px 0px\"],[\"float\",\"left\"]],[[\"width\",\"100%\"],[\"height\",\"100%\"],[\"display\",\"inline-block\"]]]],[],[]]],[],[1674914300868],\"20230123_093508\",[],[[]],[[null,[1,3,2],null,\"4334590153\",[],[],[0,2],true,null,[1],[]]],[null,[[1,\"1vp\",[[4,\"2vp\",\"2vp\"],[6,\"3vp\",\"3vp\"]],8,\"1vp\",0.30000001,[\"0.2vp\",\"0vp\",2]],[2,\"300px\",[[4,\"600px\",\"600px\"],[6,\"900px\",\"900px\"]],8,\"300px\",0.30000001,[\"60px\",\"0px\",2]]]],null,null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,null,false,null,null,false,null,null,null,null,null,null,null,null],null,null,null,null,[930623044],null,null,[1674640258778]]"
         },
         {
           "name": "google_adsense_settings",

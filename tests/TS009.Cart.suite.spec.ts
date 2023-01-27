@@ -39,7 +39,7 @@ test.describe('Add To Cart Suite',() =>{
         }
     });
 
-    test('TC014 - it should add product with specified quantity to the cart successfully',async({page,homePage,prodcutsPage,productDetailsPage,cartPage}) =>{
+    test('TC014 - it should add product with specified quantity to the cart successfully',async({homePage,prodcutsPage,productDetailsPage,cartPage}) =>{
         await homePage.clickProductsLink();
         await prodcutsPage.goToProductDetails(0);
 
@@ -50,7 +50,7 @@ test.describe('Add To Cart Suite',() =>{
         let cartitem = await cartPage.getItemInfo(0);
         expect(cartitem.qty).toBe(qty);
     });
-    test('TC015 - it should delete product from the cart successfully',async({page,homePage,prodcutsPage,cartPage}) =>{
+    test('TC015 - it should delete product from the cart successfully',async({homePage,prodcutsPage,cartPage}) =>{
         await homePage.clickProductsLink();
         await prodcutsPage.addToCart(0);
         await homePage.clickCartLink();
@@ -60,8 +60,15 @@ test.describe('Add To Cart Suite',() =>{
 
         await expect(cartPage.cart).toBeHidden();
         
-        
+    });
 
+    test('TC021 - it should add recommended product to the cart successfully',async({page,homePage,cartPage}) =>{
+        
+        await homePage.scrollToRecommendedItems();
+        await expect(homePage.recommendedItemsTitle).toBeVisible();
+        await homePage.addRecommendedProductToCart(0);
+        await homePage.clickViewCart();
+        expect(await cartPage.cartItems.count()).toBe(1)
     });
 
 });

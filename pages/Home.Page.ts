@@ -31,6 +31,11 @@ class Home{
         'Men':1,
         'Kids':2
     }
+
+    readonly recommendedItems: Locator;
+    readonly recommendedItemsTitle: Locator;
+    readonly recommendedProducts: Locator;
+
     
     constructor(page: Page){
         this.page = page;
@@ -50,7 +55,10 @@ class Home{
 
         this.addToCartBtn = this.page.locator("//a[text()[normalize-space()='Add to cart']]");
 
-        this.categories = this.page.locator("#accordian .panel")
+        this.categories = this.page.locator("#accordian .panel");
+        this.recommendedItems = this.page.locator('.recommended_items');
+        this.recommendedItemsTitle = this.recommendedItems.getByText("recommended items");
+        this.recommendedProducts = this.recommendedItems.locator(".active .single-products")
     }
 
     async clickLoginLink(){
@@ -86,6 +94,16 @@ class Home{
     async clickCategory(category: string,subcategory:string){
         await this.categories.nth(this.categoriesMap[category]).locator(`a[href="#${category}"]`).click();
         await this.page.locator(`#${category} a`,{hasText:`${subcategory}`}).click();
+    }
+
+    async scrollToRecommendedItems(){
+        await this.recommendedItems.scrollIntoViewIfNeeded();
+    }
+    async addRecommendedProductToCart(idx: number){
+        await this.recommendedProducts.nth(idx).locator("a",{hasText:"Add to cart"}).click();
+    }
+    async clickViewCart(){
+        await this.page.locator('#cartModal a').click();
     }
 }
 export default Home

@@ -87,7 +87,7 @@ test.describe('Place Order Suite',() =>{
         await expect(page.getByText("Your order has been placed successfully!")).toBeVisible();
     });
 
-    test('TC012 - it should login before checkout',async({page,prodcutsPage,homePage,loginPage,cartPage,checkoutPage}) =>{       
+    test('TC020- it should login before checkout',async({page,prodcutsPage,homePage,loginPage,cartPage,checkoutPage}) =>{       
         await homePage.clickLoginLink();
         await loginPage.login("abdelnaby4@gmail.com","123456");
         await expect(homePage.user).toContainText('Logged in as');
