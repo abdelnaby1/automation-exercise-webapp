@@ -1,0 +1,21 @@
+{
+  "person": {
+    "name": "Abdelnaby",
+    "username": "abdelnaby",
+    "password": "1234567",
+    "dayOfBirth": "26",
+    "monthOfBirth": "8",
+    "yearOfBirth": "1998",
+    "firstname": "Ahmed",
+    "lastname": "Abdelnaby",
+    "company": "Vod",
+    "address": "Cairo,Helwan",
+    "address2": "Helwan",
+    "country": "Canada",
+    "state": "Giza",
+    "city": "Giza",
+    "zipcode": "49944",
+    "mobileNumber": "01099980000"
+  },
+  "emailAlreadyExists": "abdelnaby@gmail.com"
+}
