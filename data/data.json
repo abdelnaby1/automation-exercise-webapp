@@ -1,5 +1,5 @@
 {
-  "person": {
+  "personData": {
     "name": "Abdelnaby",
     "username": "abdelnaby",
     "password": "1234567",
@@ -17,5 +17,30 @@
     "zipcode": "49944",
     "mobileNumber": "01099980000"
   },
-  "emailAlreadyExists": "abdelnaby@gmail.com"
+  "emailAlreadyExists": "abdelnaby@gmail.com",
+  "invalidEmail": "abdelnaby@gmail.com",
+  "inValidPassword": "12345",
+  "emailForGettingStorage": "abdelnaby1728159705649@gmail.com",
+  "nameForLogout": "Abdelnaby",
+  "loggedInUser": {
+    "username": "abdelnaby",
+    "email": "abdelnaby4@gmail.com",
+    "firstName": "Ahmed",
+    "lastName": "Abdelnaby",
+    "password": "123456",
+    "contactUsSubject": "Test Automation",
+    "contactUsMessage": "Thanks for this project it helped me a lot",
+    "contactUsFileName": "road.jpg"
+  },
+  "categories": [
+    { "category": "Women", "subcaregory": "Dress" },
+    { "category": "Men", "subcaregory": "Tshirts" }
+  ],
+  "paymentDetails": {
+    "name": "john",
+    "num": "1231098745642308",
+    "cvc": "123",
+    "month": "12",
+    "year": "25"
+  }
 }

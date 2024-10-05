@@ -1,26 +1,25 @@
-import {test,expect} from "../fixtures/pageFixtures"
+import { test, expect } from "../fixtures/pageFixtures";
+import { categories } from "../data/data.json";
+test.describe("Categories Suite", () => {
+  test("TC019 - it should view products of a category", async ({
+    page,
+    homePage,
+    prodcutsPage,
+  }) => {
+    await page.goto(homePage.url, { waitUntil: "domcontentloaded" });
 
-test.describe('Categories Suite',() =>{
-    test('TC016 - it should view products of a category',async({page,homePage,prodcutsPage}) =>{
-       
-        await page.goto(homePage.url,{waitUntil:"domcontentloaded"});
-
-        let count = await homePage.categories.count();
-        for (let i = 0; i < count; i++) {
-            await expect(homePage.categories.nth(i)).toBeVisible();
-        
-        }
-
-        let category = 'Women';
-        let subcaregory = 'Dress ';
-        for (let i = 0; i < 2; i++) {
-            await homePage.clickCategory(category,subcaregory);
-            await expect(prodcutsPage.title).toContainText(`${category} - ${subcaregory}`);
-            category = 'Men';
-            subcaregory = 'Tshirts ';
-        }
-
-    });
-
-
+    let count = await homePage.categories.count();
+    for (let i = 0; i < count; i++) {
+      await expect(homePage.categories.nth(i)).toBeVisible();
+    }
+    for (let i = 0; i < categories.length; i++) {
+      await homePage.clickCategory(
+        categories[i].category,
+        categories[i].subcaregory
+      );
+      await expect(prodcutsPage.title).toContainText(
+        `${categories[i].category} - ${categories[i].subcaregory}`
+      );
+    }
+  });
 });
