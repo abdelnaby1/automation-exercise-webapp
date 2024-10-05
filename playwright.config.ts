@@ -35,72 +35,29 @@ const config: PlaywrightTestConfig = {
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    // channel: "chrome",
     screenshot: "only-on-failure",
-    // video: 'retain-on-failure',
     headless: false,
-    baseURL: "https://automationexercise.com",
-    /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
-    actionTimeout: 0,
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-failure",
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
+      name: "staging",
       use: {
-        ...devices["Desktop Chrome"],
+        // ...devices["Desktop Chrome"],
+        baseURL: "https://automationexercise.com",
       },
+      retries: 1,
     },
-
     // {
-    //   name: 'firefox',
+    //   name: "production",
     //   use: {
-    //     ...devices['Desktop Firefox'],
+    //     // ...devices["Desktop Chrome"],
+    //     baseURL: "https://automationexercise.com",
     //   },
-    // },
-
-    // {
-    //   name: 'webkit',
-    //   use: {
-    //     ...devices['Desktop Safari'],
-    //   },
-    // },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: {
-    //     ...devices['Pixel 5'],
-    //   },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: {
-    //     ...devices['iPhone 12'],
-    //   },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: {
-    //     channel: 'msedge',
-    //   },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: {
-    //     channel: 'chrome',
-    //   },
+    //   retries: 0,
     // },
   ],
-
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   // outputDir: 'test-results/',
 

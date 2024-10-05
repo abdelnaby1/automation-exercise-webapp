@@ -1,5 +1,5 @@
 {
-  "person": {
+  "personData": {
     "name": "Abdelnaby",
     "username": "abdelnaby",
     "password": "1234567",
@@ -17,5 +17,14 @@
     "zipcode": "49944",
     "mobileNumber": "01099980000"
   },
-  "emailAlreadyExists": "abdelnaby@gmail.com"
+  "emailAlreadyExists": "abdelnaby@gmail.com",
+  "invalidEmail": "abdelnaby@gmail.com",
+  "inValidPassword": "12345",
+  "loggedInUser": {
+    "username": "abdelnaby",
+    "email": "abdelnaby4@gmail.com",
+    "firstName": "Ahmed",
+    "lastName": "Abdelnaby",
+    "password": "123456"
+  }
 }
