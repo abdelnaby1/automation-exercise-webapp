@@ -32,7 +32,6 @@ const config: PlaywrightTestConfig = {
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: [['list'],['allure-playwright'],["html"]],
   reporter: [["list"], ["html"]],
-
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     screenshot: "only-on-failure",
@@ -46,6 +45,7 @@ const config: PlaywrightTestConfig = {
       use: {
         // ...devices["Desktop Chrome"],
         baseURL: "https://automationexercise.com",
+        // channel: "chrome", // if you want to run it in local browser
       },
       retries: 1,
     },
@@ -56,6 +56,15 @@ const config: PlaywrightTestConfig = {
     //     baseURL: "https://automationexercise.com",
     //   },
     //   retries: 0,
+    // },
+    // {
+    //   name: "dockerized",
+    //   use: {
+    //     // ...devices["Desktop Chrome"],
+    //     baseURL: "https://automationexercise.com",
+    //     headless: true,
+    //   },
+    //   retries: 1,
     // },
   ],
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */

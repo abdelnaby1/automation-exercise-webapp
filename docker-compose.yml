@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  playwright:
+    build: .
+    volumes:
+      - ./report:/app/playwright-report
+    tty: true
+    ports:
+      - "9323:9323"

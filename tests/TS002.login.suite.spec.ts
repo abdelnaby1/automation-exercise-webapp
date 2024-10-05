@@ -1,5 +1,5 @@
 import { test, expect } from "../fixtures/pageFixtures";
-import { loggedInUser, invalidEmail, inValidPassword } from "../data/data.json"; // or use: import { persons } from '../data.json';
+import { loggedInUser, invalidEmail, inValidPassword } from "../data/data.json";
 
 test.describe("Login Suite", () => {
   test.beforeEach(async ({ page, homePage, loginPage }) => {
